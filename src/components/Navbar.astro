@@ -1,44 +1,22 @@
 ---
-import { Image } from "astro:assets";
+import BotonContacto from "../components/BotonContacto.astro";
+import LinksNavbar from "../components/LinksNavbar.astro";
 
-import Home from "../Icons/Home.astro";
-import Productos from "../Icons/Productos.astro";
-import Nosotros from "../Icons/Nosotros.astro";
-import IconPage from "/public/Image/icono.webp";
-import BotonContacto from "./BotonContacto.astro";
-
-const NavItems = [
-  {
-    icons: Home,
-    title: "Inicio",
-    Url: "/",
-  },
-  {
-    icons: Productos,
-    title: "Productos",
-    Url: "/#Productos",
-  },
-  {
-    icons: Nosotros,
-    title: "Nosotros",
-    Url: "/#Nosotros",
-  },
-];
+import Logo from "../components/Logo.astro";
 ---
 
-<header>
-  <nav>
-    <Image class="" src={IconPage} alt="Icono" width={80} height={80} />
+<nav class="bg-gray-100 shadow-lg shadow-gray-300 fixed w-full z-20 top-0 start-0">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <Logo />
 
-    {
-      NavItems.map((link) => (
-        <a href={link.Url}>
-          <link.icons />
-          {link.title}
-        </a>
-      ))
-    }
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <BotonContacto />
+    </div>
 
-    <BotonContacto />
-  </nav>
-</header>
+    <div class="items-center justify-between w-auto">
+      <LinksNavbar />
+    </div>
+  </div>
+</nav>
