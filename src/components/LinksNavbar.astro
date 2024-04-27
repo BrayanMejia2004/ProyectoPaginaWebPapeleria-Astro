@@ -1,29 +1,30 @@
 ---
 const NavItems = [
-  {    
+  {
     title: "Inicio",
-    Url: "/",
+    Url: "/",  
   },
-  {    
+  {
     title: "Productos",
     Url: "/#Productos",
   },
-  {    
+  {
     title: "Nosotros",
     Url: "/#Nosotros",
   },
 ];
 ---
 
-<ul class="flex font-medium space-x-10 rtl:space-x-reverse">
-  {
-    NavItems.map((link) => (
-      <li>
-        <a href={link.Url}        
-        class="flex text-blue-900">          
-          {link.title}
-        </a>
-      </li>
-    ))
-  }
-</ul>
+{
+  NavItems.map((link) => (
+    <li>
+      <a
+        href={link.Url}
+        class="block py-2 px-3 text-black font-semibold hover:text-blue-600"
+        aria-current="page"
+      >
+        {link.title}
+      </a>
+    </li>
+  ))
+}
