@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+import Home from "../Icons/Home.astro";
+import Productos from "../Icons/Productos.astro";
+import Nosotros from "../Icons/Nosotros.astro";
+import IconPage from "/public/Image/icono.webp";
+import BotonContacto from "./BotonContacto.astro";
+
+const NavItems = [
+  {
+    icons: Home,
+    title: "Inicio",
+    Url: "/",
+  },
+  {
+    icons: Productos,
+    title: "Productos",
+    Url: "/#Productos",
+  },
+  {
+    icons: Nosotros,
+    title: "Nosotros",
+    Url: "/#Nosotros",
+  },
+];
+---
+
+<header>
+  <nav>
+    <Image class="" src={IconPage} alt="Icono" width={80} height={80} />
+
+    {
+      NavItems.map((link) => (
+        <a href={link.Url}>
+          <link.icons />
+          {link.title}
+        </a>
+      ))
+    }
+
+    <BotonContacto />
+  </nav>
+</header>
