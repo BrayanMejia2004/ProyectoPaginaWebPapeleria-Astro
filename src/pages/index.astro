@@ -1,10 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BotonContacto from "../components/BotonContacto.astro";
+import Layout from "../layouts/Layout.astro";
+
+const NombreContacto = "!Visitanos y descrubre por qué somos tu mejor opción!";
 ---
 
 <Layout title="Papelería Jsandy - Te Ofrecemos todo en un solo lugar">
-	<main>
-		
-	</main>
+  <main class="px-20 py-10 mt-24">
+    <div class="max-w-[620px] text-center justify-center">
+      <h1 class="text-4xl lg:text-justify text-wrap pb-8">
+        En <span class="text-blue-900 font-semibold">Papeleria Jsandy</span>, ofrecemos todo lo que buscas con
+        Productos escolares, Belleza, Jugueteria, Piñateria y Servicio
+        Bancolombia.
+      </h1>
+      <p class="text-center pb-10">
+        "Te ofrecemos una amplia variedad de productos de alta calidad y un
+        servicio al cliente excepcional, encuentra todo lo que necesitas en un
+        solo lugar".
+      </p>
+      <BotonContacto >
+        {NombreContacto}
+      </BotonContacto>
+    </div>
+  </main>
 </Layout>
-

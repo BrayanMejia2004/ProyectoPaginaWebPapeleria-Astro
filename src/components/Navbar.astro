@@ -2,6 +2,9 @@
 import LinksNavbar from "../components/LinksNavbar.astro";
 import Logo from "../components/Logo.astro";
 import BotonContacto from "./BotonContacto.astro";
+import Barras from "../Icons/Barras.astro";
+
+const NombreContacto = "Contactanos";
 ---
 
 <nav
@@ -12,14 +15,18 @@ import BotonContacto from "./BotonContacto.astro";
   >
     <Logo />
     <div class="flex md:order-2 space-x-5">
-      <BotonContacto />
+      <BotonContacto>
+        {NombreContacto}
+      </BotonContacto>
+
+      <Barras />
     </div>
     <div
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
       id="navbar-sticky"
     >
       <ul
-        class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 "
+        class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0"
       >
         <LinksNavbar />
       </ul>
