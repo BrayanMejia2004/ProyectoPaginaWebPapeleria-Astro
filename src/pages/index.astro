@@ -2,32 +2,39 @@
 import BotonContacto from "../components/BotonContacto.astro";
 import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
+import Tarjetas from "../components/Tarjetas.astro";
 
 const NombreContacto = "!Visitanos y descrubre por qué somos tu mejor opción!";
 ---
 
 <Layout title="Papelería Jsandy - Te Ofrecemos todo en un solo lugar">
   <main class="px-20 py-10 mt-24">
-    <div class="flex lg:text-center justify-center items-center">
-      <div class="lg:max-w-[620px] text-pretty mr-40">
-        <h1 class="text-4xl lg:text-justify text-wrap pb-8">
-          En <span class="text-blue-900 font-semibold">Papeleria Jsandy</span>,
-          ofrecemos todo lo que buscas con Productos escolares, Belleza,
-          Jugueteria, Piñateria y Servicio Bancolombia.
-        </h1>
-        <p class="text-center pb-10">
-          "Te ofrecemos una amplia variedad de productos de alta calidad y un
-          servicio al cliente excepcional, encuentra todo lo que necesitas en un
-          solo lugar".
-        </p>
-        <BotonContacto>          
-          {NombreContacto}		  
-        </BotonContacto>
-      </div>
+    <section>
+      <div class="flex lg:text-center justify-center items-center">
+        <div class="lg:max-w-[620px] text-pretty mr-40">
+          <h1 class="text-4xl lg:text-justify text-wrap pb-8">
+            En <span class="text-blue-900 font-semibold">Papeleria Jsandy</span
+            >, ofrecemos todo lo que buscas con Productos escolares, Belleza,
+            Jugueteria, Piñateria y Servicio Bancolombia.
+          </h1>
+          <p class="text-center pb-10">
+            "Te ofrecemos una amplia variedad de productos de alta calidad y un
+            servicio al cliente excepcional, encuentra todo lo que necesitas en
+            un solo lugar".
+          </p>
+          <BotonContacto>
+            {NombreContacto}
+          </BotonContacto>
+        </div>
 
-      <div class="justify-center items-center">
-        <Carousel />
+        <div class="justify-center items-center">
+          <Carousel />
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="mt-32 bg-blue-100 rounded p-5">
+      <Tarjetas />
+    </section>
   </main>
 </Layout>
