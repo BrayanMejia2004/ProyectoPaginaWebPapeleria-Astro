@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Beneficios from "../components/Beneficios.astro";
-import Servicios from  "../components/Servicios.astro"
+import Servicios from "../components/Servicios.astro";
 import Principal from "../components/Principal.astro";
+import Ubicacion from "../components/Ubicacion.astro";
 ---
 
 <Layout title="Papelería Jsandy - Te Ofrecemos todo en un solo lugar">
   <main class="px-20 py-10 mt-24">
-    
     <!--Seccion Header -->
     <section class="my-20 size-full">
       <Principal />
@@ -15,7 +15,9 @@ import Principal from "../components/Principal.astro";
     <!--Final Seccion Header -->
 
     <!--Seccion Beneficios-->
-    <section class="my-60 bg-blue-100 rounded p-5 shadow-lg shadow-blue-200 size-full">
+    <section
+      class="my-60 bg-blue-100 rounded p-5 shadow-lg shadow-blue-200 size-full"
+    >
       <Beneficios />
     </section>
     <!--Final Seccion Beneficios-->
@@ -23,6 +25,12 @@ import Principal from "../components/Principal.astro";
     <!--Seccion Marcas -->
     <section class="my-60 size-full">
       <Servicios />
+    </section>
+    <!--Final Seccion Marcas -->
+
+    <!--Seccion Marcas -->
+    <section class="my-60 size-full">
+      <Ubicacion />
     </section>
     <!--Final Seccion Marcas -->
   </main>
