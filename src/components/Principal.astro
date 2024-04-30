@@ -1,0 +1,28 @@
+---
+import BotonContacto from "../components/BotonContacto.astro";
+import Carousel from "../components/Carousel.astro";
+
+const NombreContacto = "!Visitanos y descrubre por qué somos tu mejor opción!";
+---
+
+<div class="flex lg:text-center justify-center items-center">
+  <div class="lg:max-w-4xl text-pretty mr-40">
+    <h1 class="text-4xl lg:text-justify text-wrap pb-8">
+      En <span class="text-blue-900 font-semibold">Papeleria Jsandy</span>,
+      ofrecemos todo lo que buscas con Productos escolares, Belleza, Jugueteria,
+      Piñateria y Servicio Bancolombia.
+    </h1>
+    <p class="text-center pb-10">
+      "Te ofrecemos una amplia variedad de productos de alta calidad y un
+      servicio al cliente excepcional, encuentra todo lo que necesitas en un
+      solo lugar".
+    </p>
+    <BotonContacto>
+      {NombreContacto}
+    </BotonContacto>
+  </div>
+
+  <div class="justify-center items-center">
+    <Carousel />
+  </div>
+</div>

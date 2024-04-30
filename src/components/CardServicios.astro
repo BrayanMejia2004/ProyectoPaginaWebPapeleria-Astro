@@ -1,22 +1,123 @@
 ---
-const estilo = "bg-blue-300 p-5 rounded";
+import Impresiones from "../Icons/Impresiones.astro";
+import Fotocopias from "../Icons/Fotocopias.astro";
+import Escanner from "../Icons/Escanner.astro";
+import Redaccion from "../Icons/Redaccion.astro";
+import Material from "../Icons/Material.astro";
+import Cosmetiqueria from "../Icons/Cosmetiqueria.astro";
+import Piñateria from "../Icons/Piñateria.astro";
+import Jugueteria from "../Icons/Jugueteria.astro";
+import Cacharreria from "../Icons/Cacharreria.astro";
+import Electronicos from "../Icons/Electronicos.astro";
 
-const SERVICIOS = [
-    {
-        
-    }
-]
+const estilo = "bg-blue-100 p-10 rounded";
+const estilosIcon = "bg-blue-800";
+
+const SERVICIOSPAPELERIA = [
+  {
+    Icon: Impresiones,
+    Text: "Impresora",
+  },
+  {
+    Icon: Fotocopias,
+    Text: "Fotocopias",
+  },
+  {
+    Icon: Escanner,
+    Text: "Escanners",
+  },
+  {
+    Icon: Redaccion,
+    Text: "Redacción Documentos",
+  },
+  {
+    Icon: Material,
+    Text: "Materiales Escolares",
+  },
+  {
+    Icon: Cosmetiqueria,
+    Text: "Cosmetiqueria",
+  },
+  {
+    Icon: Piñateria,
+    Text: "Piñateria",
+  },
+  {
+    Icon: Jugueteria,
+    Text: "Jugueteria",
+  },
+  {
+    Icon: Cacharreria,
+    Text: "Cacharreria",
+  },
+  {
+    Icon: Electronicos,
+    Text: "Productos Electronicos",
+  },
+];
+
+const SERVICIOSBANCO = [
+  {
+    Icon: Impresiones,
+    Text: "Consiganaciones Internacionales",
+  },
+  {
+    Icon: Fotocopias,
+    Text: "Consignaciones Regionales",
+  },
+  {
+    Icon: Escanner,
+    Text: "Retiros Bancolombia - Nequi",
+  },
+  {
+    Icon: Redaccion,
+    Text: "Pago De Tarjetas Debito - Credito",
+  },
+  {
+    Icon: Material,
+    Text: "Pago De Recibos Publicos",
+  },
+  {
+    Icon: Cosmetiqueria,
+    Text: "Pago De Recibos De Telefonia",
+  }
+];
 ---
 
-<div class="flex flex-wrap gap-x-40">
+<div class="flex flex-wrap text-center items-center justify-center gap-x-40">
   <div class={estilo}>
-    <h4 class="font-semibold text-3xl text-blue-900">Servicios Papeleria</h4>
+    <h4 class="font-semibold text-4xl underline-offset-8 pb-5 text-blue-900">
+      Servicios Papeleria
+    </h4>
     <ul>
-
+      {
+        SERVICIOSPAPELERIA.map((servicios) => (
+          <li
+            class="flex text-center items-center justify-center gap-x-5 my-2 p-2 bg-white rounded
+                    hover:border border-blue-700 hover:bg-blue-50 hover:bg-transparent hover:text-blue-700 hover:-translate-y-1 hover:scale-110 font-bold transition ease-in-out cursor-pointer"
+          >
+            <servicios.Icon />
+            {servicios.Text}
+          </li>
+        ))
+      }
     </ul>
   </div>
 
   <div class={estilo}>
     <h4 class="font-semibold text-3xl text-blue-900">Servicios Bancolombia</h4>
+    <ul>
+      {
+        SERVICIOSBANCO.map((servicios) => (
+          <li
+            class="flex text-center items-center justify-center gap-x-5 my-2 p-2 bg-white rounded
+                    hover:border border-blue-700 hover:bg-blue-50 hover:bg-transparent hover:text-blue-700 hover:-translate-y-1 hover:scale-110 font-bold transition ease-in-out cursor-pointer"
+          >
+            <servicios.Icon />
+            {servicios.Text}
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </div>
