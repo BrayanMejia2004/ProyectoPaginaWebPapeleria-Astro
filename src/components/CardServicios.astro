@@ -10,8 +10,14 @@ import Jugueteria from "../Icons/Jugueteria.astro";
 import Cacharreria from "../Icons/Cacharreria.astro";
 import Electronicos from "../Icons/Electronicos.astro";
 
+import Internacionales from "../Icons/Internacionales.astro";
+import Regionales from "../Icons/Regionales.astro";
+import Retiros from "../Icons/Retiros.astro";
+import Tarjetas from "../Icons/Tarjetas.astro";
+import RecibosPublicos from "../Icons/RecibosPublicos.astro";
+import ReciboTelefonia from "../Icons/ReciboTelefonia.astro";
+
 const estilo = "bg-blue-100 p-10 rounded";
-const estilosIcon = "bg-blue-800";
 
 const SERVICIOSPAPELERIA = [
   {
@@ -58,27 +64,27 @@ const SERVICIOSPAPELERIA = [
 
 const SERVICIOSBANCO = [
   {
-    Icon: Impresiones,
+    Icon: Internacionales,
     Text: "Consiganaciones Internacionales",
   },
   {
-    Icon: Fotocopias,
+    Icon: Regionales,
     Text: "Consignaciones Regionales",
   },
   {
-    Icon: Escanner,
+    Icon: Retiros,
     Text: "Retiros Bancolombia - Nequi",
   },
   {
-    Icon: Redaccion,
+    Icon: Tarjetas,
     Text: "Pago De Tarjetas Debito - Credito",
   },
   {
-    Icon: Material,
+    Icon: RecibosPublicos,
     Text: "Pago De Recibos Publicos",
   },
   {
-    Icon: Cosmetiqueria,
+    Icon: ReciboTelefonia,
     Text: "Pago De Recibos De Telefonia",
   }
 ];
@@ -108,13 +114,13 @@ const SERVICIOSBANCO = [
     <h4 class="font-semibold text-3xl text-blue-900">Servicios Bancolombia</h4>
     <ul>
       {
-        SERVICIOSBANCO.map((servicios) => (
+        SERVICIOSBANCO.map((serviciosB) => (
           <li
             class="flex text-center items-center justify-center gap-x-5 my-2 p-2 bg-white rounded
                     hover:border border-blue-700 hover:bg-blue-50 hover:bg-transparent hover:text-blue-700 hover:-translate-y-1 hover:scale-110 font-bold transition ease-in-out cursor-pointer"
           >
-            <servicios.Icon />
-            {servicios.Text}
+            <serviciosB.Icon />
+            {serviciosB.Text}
           </li>
         ))
       }
