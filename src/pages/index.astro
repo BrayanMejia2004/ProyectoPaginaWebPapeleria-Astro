@@ -3,12 +3,14 @@ import BotonContacto from "../components/BotonContacto.astro";
 import Carousel from "../components/Carousel.astro";
 import Layout from "../layouts/Layout.astro";
 import Tarjetas from "../components/Tarjetas.astro";
+import Servicios from "../components/Servicios.astro";
 
 const NombreContacto = "!Visitanos y descrubre por qué somos tu mejor opción!";
 ---
 
 <Layout title="Papelería Jsandy - Te Ofrecemos todo en un solo lugar">
   <main class="px-20 py-10 mt-24">
+    <!--Seccion Header -->
     <section>
       <div class="flex lg:text-center justify-center items-center">
         <div class="lg:max-w-[620px] text-pretty mr-40">
@@ -32,9 +34,18 @@ const NombreContacto = "!Visitanos y descrubre por qué somos tu mejor opción!"
         </div>
       </div>
     </section>
+    <!--Final Seccion Header -->
 
+    <!--Seccion Beneficios-->
     <section class="mt-32 bg-blue-100 rounded p-5 shadow-xl">
       <Tarjetas />
     </section>
+    <!--Final Seccion Beneficios-->
+
+    <!--Seccion Marcas -->
+    <section class="mt-32">
+      <Servicios />
+    </section>
+    <!--Final Seccion Marcas -->
   </main>
 </Layout>
