@@ -10,23 +10,22 @@ import Facebook from "../Icons/Facebook.astro";
 import Instagram from "../Icons/Instagram.astro";
 import Whatsapp from "../Icons/Whatsapp.astro";
 
-
 const CONTACTO = [
   {
-    Icon: Email,
+    Icon: Telefono,
     Text: "Telefono: 3284958323",
-    link: "#",
+    link: "https://web.whatsapp.com/",
   },
   {
-    Icon: Telefono,
-    Text: "papeleria@gmail.com",
-    link: "#",
+    Icon: Email,
+    Text: "papeleriajsandy@gmail.com",
+    link: "mailto:papeleriajsandy@gmail.com",
   },
 
   {
     Icon: Ubicacion,
     Text: "Carrera 17b # 51-23",
-    link: "#",
+    link: "#ubicacion",
   },
 ];
 
@@ -53,18 +52,18 @@ const REDESOCIALES = [
   {
     Icon: Facebook,
     Text: "Facebook",
-    link: "#",
+    link: "https://www.facebook.com/?locale=es_LA",
   },
   {
     Icon: Instagram,
     Text: "Instagram",
-    link: "#",
+    link: "https://www.instagram.com/",
   },
 
   {
     Icon: Whatsapp,
     Text: "WhatsApp",
-    link: "#",
+    link: "https://web.whatsapp.com/",
   },
 ];
 
@@ -82,7 +81,7 @@ const alt = "Logo Empresa";
           {
             CONTACTO.map((contacto) => (
               <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                <a href={contacto.link} class="flex gap-x-5">
+                <a href={contacto.link} target="_blank" class="flex gap-x-5">
                   <contacto.Icon />
                   {contacto.Text}
                 </a>
@@ -95,33 +94,33 @@ const alt = "Logo Empresa";
       <div class="text-center justify-center">
         <h3 class="text-blue-900 font-extrabold text-2xl">Conocenos</h3>
         <ul class="py-5 text-center justify-center items-center">
-            {
-              CONOCENOS.map((conocenos) => (
-                <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                  <a href={conocenos.link} class="flex gap-x-5">
-                    <conocenos.Icon />
-                    {conocenos.Text}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
+          {
+            CONOCENOS.map((conocenos) => (
+              <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
+                <a href={conocenos.link} target="_blank" class="flex gap-x-5">
+                  <conocenos.Icon />
+                  {conocenos.Text}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
 
       <div class="text-center justify-center">
         <h3 class="text-blue-900 font-extrabold text-2xl">Redes Sociales</h3>
         <ul class="py-5 text-center justify-center items-center">
-            {
-              REDESOCIALES.map((redesociales) => (
-                <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                  <a href={redesociales.link} class="flex gap-x-5">
-                    <redesociales.Icon />
-                    {redesociales.Text}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
+          {
+            REDESOCIALES.map((redesociales) => (
+              <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
+                <a href={redesociales.link} target="_blank" class="flex gap-x-5">
+                  <redesociales.Icon />
+                  {redesociales.Text}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   </div>
