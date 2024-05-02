@@ -1,3 +1,128 @@
 ---
+import { Image } from "astro:assets";
+import Logo from "/public/Image/icono.webp";
+import Email from "../Icons/Email.astro";
+import Telefono from "../Icons/Telefono.astro";
+import Ubicacion from "../Icons/Ubicacion.astro";
+import Formulario from "../Icons/Formulario.astro";
+import Ubicacion2 from "../Icons/Ubicacion2.astro";
+import Facebook from "../Icons/Facebook.astro";
+import Instagram from "../Icons/Instagram.astro";
+import Whatsapp from "../Icons/Whatsapp.astro";
 
+
+const CONTACTO = [
+  {
+    Icon: Email,
+    Text: "Telefono: 3284958323",
+    link: "#",
+  },
+  {
+    Icon: Telefono,
+    Text: "papeleria@gmail.com",
+    link: "#",
+  },
+
+  {
+    Icon: Ubicacion,
+    Text: "Carrera 17b # 51-23",
+    link: "#",
+  },
+];
+
+const CONOCENOS = [
+  {
+    Icon: Email,
+    Text: "¿Quienes Somos?",
+    link: "#",
+  },
+  {
+    Icon: Ubicacion2,
+    Text: "Nuestra Papeleria",
+    link: "#",
+  },
+
+  {
+    Icon: Formulario,
+    Text: "Formulario Contacto",
+    link: "#",
+  },
+];
+
+const REDESOCIALES = [
+  {
+    Icon: Facebook,
+    Text: "Facebook",
+    link: "#",
+  },
+  {
+    Icon: Instagram,
+    Text: "Instagram",
+    link: "#",
+  },
+
+  {
+    Icon: Whatsapp,
+    Text: "WhatsApp",
+    link: "#",
+  },
+];
+
+const alt = "Logo Empresa";
 ---
+
+<footer class="bg-gray-100 p-10">
+  <div class="flex flex-row justify-around">
+    <Image src={Logo} alt={alt} />
+
+    <div class="flex flex-wrap gap-x-32">
+      <div class="text-center justify-center">
+        <h3 class="text-blue-900 font-extrabold text-2xl">Contactanos</h3>
+        <ul class="py-5 text-center justify-center items-center">
+          {
+            CONTACTO.map((contacto) => (
+              <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
+                <a href={contacto.link} class="flex gap-x-5">
+                  <contacto.Icon />
+                  {contacto.Text}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="text-center justify-center">
+        <h3 class="text-blue-900 font-extrabold text-2xl">Conocenos</h3>
+        <ul class="py-5 text-center justify-center items-center">
+            {
+              CONOCENOS.map((conocenos) => (
+                <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
+                  <a href={conocenos.link} class="flex gap-x-5">
+                    <conocenos.Icon />
+                    {conocenos.Text}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+      </div>
+
+      <div class="text-center justify-center">
+        <h3 class="text-blue-900 font-extrabold text-2xl">Redes Sociales</h3>
+        <ul class="py-5 text-center justify-center items-center">
+            {
+              REDESOCIALES.map((redesociales) => (
+                <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
+                  <a href={redesociales.link} class="flex gap-x-5">
+                    <redesociales.Icon />
+                    {redesociales.Text}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
