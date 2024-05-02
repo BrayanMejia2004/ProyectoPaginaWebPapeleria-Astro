@@ -86,15 +86,15 @@ const SERVICIOSBANCO = [
   {
     Icon: ReciboTelefonia,
     Text: "Pago De Recibos De Telefonia",
-  }
+  },
 ];
 ---
 
 <div class="flex flex-wrap text-center items-center justify-center gap-x-40">
   <div class={estilo}>
-    <h4 class="font-semibold text-4xl underline-offset-8 pb-5 text-blue-900">
+    <h3 class="font-semibold text-4xl pb-5 text-blue-900">
       Servicios Papeleria
-    </h4>
+    </h3>
     <ul>
       {
         SERVICIOSPAPELERIA.map((servicios) => (
@@ -111,7 +111,9 @@ const SERVICIOSBANCO = [
   </div>
 
   <div class={estilo}>
-    <h4 class="font-semibold text-3xl text-blue-900">Servicios Bancolombia</h4>
+    <h3 class="font-semibold text-4xl pb-5 text-blue-900">
+      Servicios Bancolombia
+    </h3>
     <ul>
       {
         SERVICIOSBANCO.map((serviciosB) => (
