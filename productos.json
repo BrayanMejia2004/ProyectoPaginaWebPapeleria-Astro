@@ -1,0 +1,46 @@
+{
+  "productos": {
+    "productos-escolares": [
+      {
+        "name": "Lápices De Colores Triangulares Kores Estuche",
+        "valor": "20.000",
+        "url": "https://i.ibb.co/TWjhdFf/Colores-ME.webp"
+      },
+      {
+        "name": "Marcadores Kiut Resaltadores Pastel 8 Piezas Marcatextos",
+        "valor": "15.000",
+        "url": ""
+      },
+      {
+        "name": "Libreta Canson Art Book One A5. Color Blanco",
+        "valor": "5.000",
+        "url": ""
+      },
+      {
+        "name": "Boligrafo Kiut Norma Color De La Tinta Surtidos",
+        "valor": "10.000",
+        "url": ""
+      },
+      {
+        "name": "50 Colores Profesionales Lápices Faber Castell",
+        "valor": "50.000",
+        "url": ""
+      },
+      {
+        "name": "Marcadores Borrables Para Tablero X8 + Borrador",
+        "valor": "12.000",
+        "url": ""
+      },
+      {
+        "name": "Cuaderno Cosido Rayado Peluches X 100 Hojas Norma",
+        "valor": "8.000",
+        "url": ""
+      },
+      {
+        "name": "Escuadra Transportador Faber Castell 993-n",
+        "valor": "5.000",
+        "url": ""
+      }
+    ]
+  }
+}
