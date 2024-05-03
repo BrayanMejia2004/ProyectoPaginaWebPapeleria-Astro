@@ -1,14 +1,16 @@
 ---
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
+import IconEscolar from "../../Icons/IconProductos/IconEscolar.astro";
+import IconGlobo from "../../Icons/IconProductos/IconGlobo.astro";
 
-import imagen1 from "/public/ImageProductos/ColoresME.webp"
-import imagen2 from "/public/ImageProductos/ResaltadoresME.webp"
-import imagen3 from "/public/ImageProductos/CarpetaME.webp"
-import imagen4 from "/public/ImageProductos/LapicerosME.webp"
-import imagen5 from "/public/ImageProductos/ColoresFaberME.webp"
-import imagen6 from "/public/ImageProductos/MarcadoresME.webp"
-import imagen7 from "/public/ImageProductos/CuadernosME.webp"
-import imagen8 from "/public/ImageProductos/EscuadraME.webp"
+import imagen1 from "/public/ImageProductos/ColoresME.webp";
+import imagen2 from "/public/ImageProductos/ResaltadoresME.webp";
+import imagen3 from "/public/ImageProductos/CarpetaME.webp";
+import imagen4 from "/public/ImageProductos/LapicerosME.webp";
+import imagen5 from "/public/ImageProductos/ColoresFaberME.webp";
+import imagen6 from "/public/ImageProductos/MarcadoresME.webp";
+import imagen7 from "/public/ImageProductos/CuadernosME.webp";
+import imagen8 from "/public/ImageProductos/EscuadraME.webp";
 
 const productosEscolares = [
   {
@@ -25,6 +27,7 @@ const productosEscolares = [
     nombre: "Libreta Canson Art Book One A5",
     valor: "5.000",
     url: imagen3,
+    estilo: "max-w-[170px]",
   },
   {
     nombre: "Boligrafo Kiut Norma Color De La Tinta Surtidos",
@@ -54,21 +57,65 @@ const productosEscolares = [
 ];
 ---
 
-<div class="">
-  <h2 class="font-bold text-5xl text-blue-900 mb-20">Materiales Escolares</h2>
-  {
-    productosEscolares.map(({ nombre, valor, url }) => (
-      <div class="">
-        <div class="">
-          <Image
-            src={url}
-            alt="Imagen"
-            class="flex w-24 h-24 text-center justify-center"
-          />
+<div>
+  <h2 class="flex items-center font-bold text-5xl text-blue-900 mb-20">
+    <IconEscolar />
+    Materiales Escolares
+  </h2>
+
+  <div class="flex text-center justify-center items-center flex-wrap mb-40">
+    {
+      productosEscolares.map(({ nombre, valor, url }) => (
+        <div class="m-5 text-center items-center justify-center bg-blue-100 p-5 rounded-lg max-w-64">
+          <div class="flex text-center items-center justify-center mb-5">
+            <Image src={url} alt="Imagen" class="max-w-40" />
+          </div>
+          <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
+            {nombre}
+          </h4>
+          <p class="font-bold text-xl pb-5">{valor}</p>
+          <button
+            type="button"
+            class="bg-blue-800 p-2 rounded text-white hover:bg-blue-500"
+          >
+            Agregar Al Carrito
+          </button>
         </div>
-        <h4>{nombre}</h4>
-        <p>{valor}</p>
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
+
+  <h2 class="flex items-center font-bold text-5xl text-blue-900 mb-20">
+    <IconGlobo />
+    Piñateria y Jugueteria
+  </h2>
+
+  <div class="flex text-center justify-center items-center flex-wrap mb-40">
+    {
+      productosEscolares.map(({ nombre, valor, url }) => (
+        <div class="m-5 text-center items-center justify-center bg-blue-100 p-5 rounded-lg max-w-64">
+          <div class="flex text-center items-center justify-center mb-5">
+            <Image src={url} alt="Imagen" class="max-w-40" />
+          </div>
+          <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
+            {nombre}
+          </h4>
+          <p class="font-bold text-xl pb-5">{valor}</p>
+          <button
+            type="button"
+            class="bg-blue-800 p-2 rounded text-white hover:bg-blue-500"
+          >
+            Agregar Al Carrito
+          </button>
+        </div>
+      ))
+    }
+  </div>
 </div>
+
+<style>
+  h2 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c7c7c7;
+  }
+</style>
