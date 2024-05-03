@@ -1,19 +1,20 @@
 ---
-import { Image } from 'astro:assets';
-import LogoEmpresa from '/public/Image/icono.webp';
+import { Image } from "astro:assets";
+import LogoEmpresa from "/public/Image/icono.webp";
 ---
 
-  <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-    <Image 
-    src={LogoEmpresa} 
-    alt="Logo Papelería" 
+<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <Image
+    src={LogoEmpresa}
+    alt="Logo Papelería"
     width="40"
     height="40"
-    />
+    loading="eager"
+    property="true"
+  />
 
-    <span
-      class="text-blue-900 self-center text-2xl font-semibold whitespace-nowrap"
-      >Papelería Jsandy</span
-    >
-  </a>
-
+  <span
+    class="text-blue-900 self-center text-2xl font-semibold whitespace-nowrap"
+    >Papelería Jsandy</span
+  >
+</a>

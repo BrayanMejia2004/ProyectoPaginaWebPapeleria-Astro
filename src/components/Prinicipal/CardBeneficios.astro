@@ -1,31 +1,40 @@
 ---
+import { Image } from "astro:assets"
+
+import usuario from "/public/Image/usuario.gif"
+import redesociales from "/public/Image/redes-sociales.gif"
+import lectura from "/public/Image/modo-de-lectura.gif"
+import etiqueta from "/public/Image/etiqueta.gif"
+import tecnico from "/public/Image/apoyo-tecnico.gif"
+
+
 const cards = [
   {
-    image: "/Image/usuario.gif",
+    image: usuario,
     title: "Variedad Incomparable",
     descripcion:
       "Desde útiles básicos hasta artículos especializados, tenemos todo lo que necesitas para el éxito académico.",
   },
   {
-    image: "/Image/redes-sociales.gif",
+    image: redesociales,
     title: "Productos de alta calidad",
     descripcion:
       "Nos comprometemos a ofrecer productos duraderos y funcionales que cumplen con los más altos estándares de calidad.",
   },
   {
-    image: "/Image/modo-de-lectura.gif",
+    image: lectura,
     title: "Atención personalizada",
     descripcion:
       "Nuestro equipo está siempre dispuesto a ayudarte y brindarte el mejor servicio al cliente para que encuentres exactamente lo que buscas.",
   },
   {
-    image: "/Image/etiqueta.gif",
+    image: etiqueta,
     title: "Precios competitivos",
     descripcion:
       "Ofrecemos precios asequibles para que puedas obtener los productos que necesitas sin comprometer tu presupuesto.",
   },
   {
-    image: "/Image/apoyo-tecnico.gif",
+    image: tecnico,
     title: "Innovación constante",
     descripcion:
       "Estamos siempre al tanto de las últimas tendencias y novedades en el mercado paraofrecerte productos innovadores y de vanguardia.",
@@ -37,10 +46,9 @@ const cards = [
   cards.map(({ image, title, descripcion }) => (
     <div class=" bg-blue-50 rounded-lg p-5 text-center justify-center items-center">
       <div class="flex text-center items-center justify-center">
-        <img
+        <Image
           src={image}
-          alt="Imagen"
-          loading="lazy"
+          alt="Imagen"          
           class="flex w-24 H-24 rounded-lg text-center justify-center"
         />
       </div>
