@@ -12,6 +12,15 @@ import imagen6 from "/public/ImageProductos/MarcadoresME.webp";
 import imagen7 from "/public/ImageProductos/CuadernosME.webp";
 import imagen8 from "/public/ImageProductos/EscuadraME.webp";
 
+import imagen9 from "/public/ImageProductos/BombasPJ.webp";
+import imagen10 from "/public/ImageProductos/InflaglobosPJ.webp";
+import imagen11 from "/public/ImageProductos/BolcanPJ.webp";
+import imagen12 from "/public/ImageProductos/NumerosPJ.webp";
+import imagen13 from "/public/ImageProductos/TioRicoPJ.webp";
+import imagen14 from "/public/ImageProductos/StopPJ.webp";
+import imagen15 from "/public/ImageProductos/EnredadosPJ.webp";
+import imagen16 from "/public/ImageProductos/TorrePJ.webp";
+
 const productosEscolares = [
   {
     nombre: "Lápices De Colores Triangulares Kores Estuche",
@@ -55,6 +64,49 @@ const productosEscolares = [
     url: imagen8,
   },
 ];
+
+const productosPiñateriayJugueteria = [
+  {
+    nombre: "Bombas Globos R-12 Feliz Cumpleaños X 12 Sempertex",
+    valor: "3.000",
+    url: imagen9,
+  },
+  {
+    nombre: "Inflador Manual Profesional Sempertex",
+    valor: "10.000",
+    url: imagen10,
+  },
+  {
+    nombre: "Bolcan Unidad",
+    valor: "2.000",
+    url: imagen11,
+  },
+  {
+    nombre: "Bombas De Números Metalizados 16 O 40 Cm",
+    valor: "7.000",
+    url: imagen12,
+  },
+  {
+    nombre: "Juego De Mesa Monopolio Tio Rico Ronda",
+    valor: "60.000",
+    url: imagen13,
+  },
+  {
+    nombre: "Juego De Mesa Stop Ronda pequeño",
+    valor: "75.000",
+    url: imagen14,
+  },
+  {
+    nombre: "Juego Didactico Enredados Ronda",
+    valor: "5.000",
+    url: imagen15,
+  },
+  {
+    nombre: "Torre Creaplast Círculos Ensartables X 6 Uds",
+    valor: "5.000",
+    url: imagen16,    
+  },
+];
 ---
 
 <div>
@@ -68,7 +120,7 @@ const productosEscolares = [
       productosEscolares.map(({ nombre, valor, url }) => (
         <div class="m-5 text-center items-center justify-center bg-blue-100 p-5 rounded-lg max-w-64">
           <div class="flex text-center items-center justify-center mb-5">
-            <Image src={url} alt="Imagen" class="max-w-40" />
+            <Image src={url} alt="Imagen"/>
           </div>
           <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
             {nombre}
@@ -92,10 +144,10 @@ const productosEscolares = [
 
   <div class="flex text-center justify-center items-center flex-wrap mb-40">
     {
-      productosEscolares.map(({ nombre, valor, url }) => (
+      productosPiñateriayJugueteria.map(({ nombre, valor, url }) => (
         <div class="m-5 text-center items-center justify-center bg-blue-100 p-5 rounded-lg max-w-64">
           <div class="flex text-center items-center justify-center mb-5">
-            <Image src={url} alt="Imagen" class="max-w-40" />
+            <Image src={url} alt="Imagen"/>
           </div>
           <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
             {nombre}
