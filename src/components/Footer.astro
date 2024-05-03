@@ -33,7 +33,7 @@ const CONOCENOS = [
   {
     Icon: Email,
     Text: "¿Quienes Somos?",
-    link: "#",
+    link: "/Nosotros",
   },
   {
     Icon: Ubicacion2,
@@ -81,7 +81,7 @@ const alt = "Logo Empresa";
           {
             CONTACTO.map((contacto) => (
               <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                <a href={contacto.link} target="_blank" class="flex gap-x-5">
+                <a href={contacto.link} class="flex gap-x-5">
                   <contacto.Icon />
                   {contacto.Text}
                 </a>
@@ -97,7 +97,7 @@ const alt = "Logo Empresa";
           {
             CONOCENOS.map((conocenos) => (
               <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                <a href={conocenos.link} target="_blank" class="flex gap-x-5">
+                <a href={conocenos.link} class="flex gap-x-5">
                   <conocenos.Icon />
                   {conocenos.Text}
                 </a>
