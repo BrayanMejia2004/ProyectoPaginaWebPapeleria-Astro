@@ -21,6 +21,16 @@ import imagen14 from "/public/ImageProductos/StopPJ.webp";
 import imagen15 from "/public/ImageProductos/EnredadosPJ.webp";
 import imagen16 from "/public/ImageProductos/TorrePJ.webp";
 
+import imagen17 from "/public/ImageProductos/MOUSEINALAMBRICOTCN.webp";
+import imagen18 from "/public/ImageProductos/MEMORIATCN.webp";
+import imagen19 from "/public/ImageProductos/PAPELFOTOGRAFICOTCN.webp";
+import imagen20 from "/public/ImageProductos/PAPELFOTOGRAFICO-TCN.webp";
+import imagen21 from "/public/ImageProductos/PADMOUSETCN.webp";
+import imagen22 from "/public/ImageProductos/RESMATCN.webp";
+import imagen23 from "/public/ImageProductos/TECLADOTCN.webp";
+import imagen24 from "/public/ImageProductos/MOUSETCN.webp";
+
+
 const productosEscolares = [
   {
     nombre: "Lápices De Colores Triangulares Kores Estuche",
@@ -104,7 +114,50 @@ const productosPiñateriayJugueteria = [
   {
     nombre: "Torre Creaplast Círculos Ensartables X 6 Uds",
     valor: "5.000",
-    url: imagen16,    
+    url: imagen16,
+  },
+];
+
+const productosTecnologia = [
+  {
+    nombre: "Mouse Inalámbrico Genius Nx-7000 Calm Black",
+    valor: "30.000",
+    url: imagen17,
+  },
+  {
+    nombre: "Memoria Usb Kingston 128 Gb 3.2 Exodia Onix Negra",
+    valor: "15.000",
+    url: imagen18,
+  },
+  {
+    nombre: "Papel Fotográfico Brillante Pointer Glossy 160gr Carta",
+    valor: "12.000",
+    url: imagen19,
+  },
+  {
+    nombre: "Papel Fotográfico Brillante Pointer Glossy 160gr Carta",
+    valor: "10.000",
+    url: imagen20,
+  },
+  {
+    nombre: "Pad Mouse Ergonómico En Gel Apoyamuñeca Gris",
+    valor: "15.000",
+    url: imagen21,
+  },
+  {
+    nombre: "Resma Reprograf Carta Bond Blanco",
+    valor: "23.000",
+    url: imagen22,
+  },
+  {
+    nombre: "Kit De Teclado Y Mouse Genius Español De Color Negro",
+    valor: "64.000",
+    url: imagen23,
+  },
+  {
+    nombre: "Mouse Logitech M110 Silent 3 Botone Gris Color Gris",
+    valor: "40.000",
+    url: imagen24,
   },
 ];
 ---
@@ -120,7 +173,7 @@ const productosPiñateriayJugueteria = [
       productosEscolares.map(({ nombre, valor, url }) => (
         <div class="m-5 text-center items-center justify-center bg-blue-100 p-5 rounded-lg max-w-64">
           <div class="flex text-center items-center justify-center mb-5">
-            <Image src={url} alt="Imagen"/>
+            <Image src={url} alt="Imagen" />
           </div>
           <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
             {nombre}
@@ -147,7 +200,34 @@ const productosPiñateriayJugueteria = [
       productosPiñateriayJugueteria.map(({ nombre, valor, url }) => (
         <div class="m-5 text-center items-center justify-center bg-blue-100 p-5 rounded-lg max-w-64">
           <div class="flex text-center items-center justify-center mb-5">
-            <Image src={url} alt="Imagen"/>
+            <Image src={url} alt="Imagen" />
+          </div>
+          <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
+            {nombre}
+          </h4>
+          <p class="font-bold text-xl pb-5">{valor}</p>
+          <button
+            type="button"
+            class="bg-blue-800 p-2 rounded text-white hover:bg-blue-500"
+          >
+            Agregar Al Carrito
+          </button>
+        </div>
+      ))
+    }
+  </div>
+
+  <h2 class="flex items-center font-bold text-5xl text-blue-900 mb-20">
+    <IconGlobo />
+    Tecnología
+  </h2>
+
+  <div class="flex text-center justify-center items-center flex-wrap mb-40">
+    {
+      productosTecnologia.map(({ nombre, valor, url }) => (
+        <div class="m-5 text-center items-center justify-center bg-blue-100 p-5 rounded-lg max-w-64">
+          <div class="flex text-center items-center justify-center mb-5">
+            <Image src={url} alt="Imagen" />
           </div>
           <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
             {nombre}
