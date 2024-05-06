@@ -44,7 +44,7 @@ const cards = [
 
 {
   cards.map(({ image, title, descripcion }) => (
-    <div class=" bg-blue-50 rounded-lg p-5 text-center justify-center items-center">
+    <div class="bg-blue-50 rounded-lg p-5 text-center justify-center items-center">
       <div class="flex text-center items-center justify-center">
         <Image
           src={image}
@@ -52,7 +52,7 @@ const cards = [
           class="flex w-24 H-24 rounded-lg text-center justify-center"
         />
       </div>
-      <h3 class="text-blue-900 pt-5 font-bold text-2xl">{title}</h3>
+      <h3 class="text-blue-900 pt-5 font-bold 2xl:text-2xl xl:text-xl">{title}</h3>
       <p class="mt-5 font-medium text-pretty">{descripcion}</p>
     </div>
   ))
