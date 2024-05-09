@@ -68,20 +68,21 @@ const REDESOCIALES = [
 ];
 
 const alt = "Logo Empresa";
+const clase = "lg:w-52 h-52"
 ---
 
 <footer class="bg-gray-100 p-10">
   <div class="flex flex-row justify-around">
-    <Image src={Logo} alt={alt} />
+    <Image src={Logo} alt={alt} class={clase} />
 
     <div class="flex flex-wrap gap-x-32">
       <div class="text-center justify-center">
-        <h3 class="text-blue-900 font-extrabold text-2xl">Contactanos</h3>
+        <h3 class="text-blue-900 font-extrabold 2xl:text-2xl lg:text-xl">Contactanos</h3>
         <ul class="py-5 text-center justify-center items-center">
           {
             CONTACTO.map((contacto) => (
               <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                <a href={contacto.link} class="flex gap-x-5">
+                <a href={contacto.link} class="flex gap-x-5 lg:text-sm">
                   <contacto.Icon />
                   {contacto.Text}
                 </a>
@@ -92,12 +93,12 @@ const alt = "Logo Empresa";
       </div>
 
       <div class="text-center justify-center">
-        <h3 class="text-blue-900 font-extrabold text-2xl">Conocenos</h3>
+        <h3 class="text-blue-900 font-extrabold 2xl:text-2xl lg:text-xl">Conocenos</h3>
         <ul class="py-5 text-center justify-center items-center">
           {
             CONOCENOS.map((conocenos) => (
               <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                <a href={conocenos.link} class="flex gap-x-5">
+                <a href={conocenos.link} class="flex gap-x-5 lg:text-sm">
                   <conocenos.Icon />
                   {conocenos.Text}
                 </a>
@@ -108,12 +109,12 @@ const alt = "Logo Empresa";
       </div>
 
       <div class="text-center justify-center">
-        <h3 class="text-blue-900 font-extrabold text-2xl">Redes Sociales</h3>
+        <h3 class="text-blue-900 font-extrabold 2xl:text-2xl lg:text-xl">Redes Sociales</h3>
         <ul class="py-5 text-center justify-center items-center">
           {
             REDESOCIALES.map((redesociales) => (
               <li class="py-3 hover:text-blue-600 cursor-pointer hover:font-bold hover:scale-110 hover:bg-slate-100">
-                <a href={redesociales.link} target="_blank" class="flex gap-x-5">
+                <a href={redesociales.link} target="_blank" class="flex gap-x-5 lg:text-sm">
                   <redesociales.Icon />
                   {redesociales.Text}
                 </a>

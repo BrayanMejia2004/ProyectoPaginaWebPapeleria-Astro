@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import IconEscolar from "../../Icons/IconProductos/IconEscolar.astro";
 import IconGlobo from "../../Icons/IconProductos/IconGlobo.astro";
+import IconTecnologia from "../../Icons/IconProductos/IconTecnologia.astro";
 
 import imagen1 from "/public/ImageProductos/ColoresME.webp";
 import imagen2 from "/public/ImageProductos/ResaltadoresME.webp";
@@ -29,7 +30,6 @@ import imagen21 from "/public/ImageProductos/PADMOUSETCN.webp";
 import imagen22 from "/public/ImageProductos/RESMATCN.webp";
 import imagen23 from "/public/ImageProductos/TECLADOTCN.webp";
 import imagen24 from "/public/ImageProductos/MOUSETCN.webp";
-
 
 const productosEscolares = [
   {
@@ -163,7 +163,10 @@ const productosTecnologia = [
 ---
 
 <div>
-  <h2 class="flex items-center font-bold text-5xl text-blue-900 mb-20">
+  <h2
+    class="flex items-center font-bold 2xl:text-5xl text-blue-900 mb-20
+  lg:text-3xl"
+  >
     <IconEscolar />
     Materiales Escolares
   </h2>
@@ -175,7 +178,10 @@ const productosTecnologia = [
           <div class="flex text-center items-center justify-center mb-5">
             <Image src={url} alt="Imagen" />
           </div>
-          <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
+          <h4
+            class="text-blue-700 font-extrabold text-wrap pb-3 2xl:text-lg
+          lg:text-base"
+          >
             {nombre}
           </h4>
           <p class="font-bold text-xl pb-5">{valor}</p>
@@ -190,7 +196,10 @@ const productosTecnologia = [
     }
   </div>
 
-  <h2 class="flex items-center font-bold text-5xl text-blue-900 mb-20">
+  <h2
+    class="flex items-center font-bold text-5xl text-blue-900 mb-20
+  lg:text-3xl"
+  >
     <IconGlobo />
     Piñateria y Jugueteria
   </h2>
@@ -202,7 +211,8 @@ const productosTecnologia = [
           <div class="flex text-center items-center justify-center mb-5">
             <Image src={url} alt="Imagen" />
           </div>
-          <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
+          <h4 class="text-blue-700 font-extrabold text-wrap pb-3 2xl:text-lg
+          lg:text-base">
             {nombre}
           </h4>
           <p class="font-bold text-xl pb-5">{valor}</p>
@@ -217,9 +227,12 @@ const productosTecnologia = [
     }
   </div>
 
-  <h2 class="flex items-center font-bold text-5xl text-blue-900 mb-20">
-    <IconGlobo />
-    Tecnología
+  <h2
+    class="flex items-center font-bold text-5xl text-blue-900 mb-20
+  lg:text-3xl"
+  >
+    <IconTecnologia />
+    Tecnología y Electronicos
   </h2>
 
   <div class="flex text-center justify-center items-center flex-wrap mb-40">
@@ -229,7 +242,8 @@ const productosTecnologia = [
           <div class="flex text-center items-center justify-center mb-5">
             <Image src={url} alt="Imagen" />
           </div>
-          <h4 class="text-blue-700 font-extrabold text-wrap pb-2 text-lg">
+          <h4 class="text-blue-700 font-extrabold text-wrap pb-3 2xl:text-lg
+          lg:text-base">
             {nombre}
           </h4>
           <p class="font-bold text-xl pb-5">{valor}</p>
