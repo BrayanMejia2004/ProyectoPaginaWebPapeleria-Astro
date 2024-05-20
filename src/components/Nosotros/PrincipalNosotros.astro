@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Formulario from "../Nosotros/Formulario.astro";
 import Video from "./Video.astro";
+import Juego from "./Juego.astro";
 import VideoNosotros from "./VideoNosotros.astro";
 import Logo from "/public/Image/logo.webp";
 ---
@@ -26,5 +27,10 @@ import Logo from "/public/Image/logo.webp";
       alt="LOGO"
       class={"max-w-lg max-h-screen rounded shadow-lg shadow-red-700"}
     />
+  </div>
+
+  <div>
+    <h2 class="font-semibold text-5xl text-blue-900 py-10">VideoJuego Scratch</h2>
+    <Juego />
   </div>
 </div>
