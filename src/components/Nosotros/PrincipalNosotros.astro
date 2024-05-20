@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Formulario from "../Nosotros/Formulario.astro";
+import Video from "./Video.astro";
 import VideoNosotros from "./VideoNosotros.astro";
 import Logo from "/public/Image/logo.webp";
 ---
@@ -8,7 +9,8 @@ import Logo from "/public/Image/logo.webp";
 <div class="flex flex-col text-center justify-center items-center">
   <h2 class="font-semibold text-5xl text-blue-900">¿Quienes Somos?</h2>
 
-  <div class="flex text-center justify-center items-center mt-20">
+  <div class="flex text-center justify-center items-center mt-20 gap-x-10">    
+    <Video />
     <VideoNosotros />
   </div>
   <div class="flex flex-row gap-x-24 text-center justify-center items-center">
