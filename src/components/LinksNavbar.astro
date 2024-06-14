@@ -11,8 +11,13 @@ const NavItems = [
   },
   {
     Icon: Nosotros,
-    title: "Nosotros",
-    Url: '/Nosotros',
+    title: "Beneficios",
+    Url: '#beneficios',
+  },
+  {
+    Icon: Nosotros,
+    title: "Servicios",
+    Url: '#servicios',
   },
 ];
 ---
@@ -22,7 +27,7 @@ const NavItems = [
     <li>
       <a
         href={link.Url}
-        class="flex gap-2 py-2 px-3 text-black font-semibold hover:text-blue-600"        
+        class="flex gap-2 py-2 px-2 text-black font-semibold hover:text-blue-600"        
       >
         <link.Icon />
         {link.title}
